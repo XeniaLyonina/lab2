@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Lyonina Xenia</title>
+        </head>
+            <body>
+                <script>
+                    p = 1, f = 1;
+                    function arctan(x, n)
+                     {
+                         var r;
+                         if (n == 0)
+                             return x;
+  
+                        //Рекурсия
+                        r = arctan(x, n - 1);
+                        p =Math.pow(Math.abs(p),2) * x* Math.pow((-1),n);
+                        //2n+1
+                        f = 2*f+1;
+                        return (r + p / f);
+                    }
+                    var x = parseFloat(prompt("Введите значение x")), n = parseFloat(prompt("Введите значение n",""));
+                    var res = arctan(x, n);
+
+                    const img = document.createElement("img");
+                        img.src = "92.png";
+                         document.body.appendChild(img);
+                    document.write(res.toFixed(6));
+                    
+                </script>  
+            </body>
+    </html>
